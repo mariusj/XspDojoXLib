@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.commons.Extension">
+      <service
+            class="org.openntf.xsp.dojox.DojoxResourceProvider"
+            type="com.ibm.xsp.GlobalResourceProvider">
+      </service>
+   </extension>
+   <extension point="com.ibm.commons.Extension">
+         <service
+            type="com.ibm.xsp.resource.DojoModulePathResource"
+            class="org.openntf.xsp.dojox.DominoModulePath" />
+   </extension>
+   <extension
+         point="com.ibm.commons.Extension">
+      <service
+            class="org.openntf.xsp.dojox.DojoXLibrary"
+            type="com.ibm.xsp.Library">
+      </service>
+   </extension>
+   
+
+</plugin>
