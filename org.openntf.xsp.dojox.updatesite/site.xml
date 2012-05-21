@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.openntf.xsp.dojox.feature_8.5.3.qualifier.jar" id="org.openntf.xsp.dojox.feature" version="8.5.3.qualifier">
+      <category name="XPages"/>
+   </feature>
+   <category-def name="XPages" label="XPages"/>
+</site>
