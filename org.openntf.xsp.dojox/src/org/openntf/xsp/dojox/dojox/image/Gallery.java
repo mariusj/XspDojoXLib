@@ -16,13 +16,13 @@
 
 package org.openntf.xsp.dojox.dojox.image;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo Gallery", 
 		description = "Widget that displays a series of thumbnail sized images, for quick browsing and selection, and a single large image", 
 		tagName = "dxGallery",
@@ -30,7 +30,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoLayoutRenderer",
 		dojoModule = "dojox.image.Gallery",
 		defaultDojoType = "dojox.image.Gallery",

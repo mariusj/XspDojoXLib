@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.widget;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo Roller", 
 		description = "The Roller is a degradable, unobtrusive widget to convert an unordered list (<ul>) of styled items into a single item, and loop through the display.", 
 		tagName = "dxRoller",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoLayoutRenderer",
 		dojoModule = "dojox.widget.Roller",
 		defaultDojoType = "dojox.widget.Roller",
@@ -39,28 +39,28 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 )
 public abstract class Roller extends UIDojoWidget {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Interval between rolls", 
     		displayName = "Delay",
     		category = "dojo-widget"    		
 	)
     protected Integer delay;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Toggle to control starup behavior. Call .start() manually if set to `false`", 
     		displayName = "AutoStart",
     		category = "dojo-widget"    		
 	)
     protected Boolean autoStart;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Speed (in ms) to apply to the 'in' animation (show the node)", 
     		displayName = "durationIn",
     		category = "dojo-widget"    		
 	)
     protected Integer durationIn;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Speed (in ms) to apply to the 'out' animation (hide the showing node)", 
     		displayName = "durationOut",
     		category = "dojo-widget"    		

@@ -16,12 +16,12 @@
 
 package org.openntf.xsp.dojox.dojox.image;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.component.xp.XspOutputLink;
 
-@XspComponent(
+@XspGenComponent(
 		description = "An Elegant, keyboard accessible, markup and store capable " +
 				"Lightbox widget to show images in a modal dialog-esque format. " +
 				"Can show individual images as Modal dialog, or can group images " +
@@ -36,7 +36,7 @@ import com.ibm.xsp.component.xp.XspOutputLink;
 )
 public abstract class Lightbox extends XspOutputLink {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Grouping images in a page with similar tags will provide " +
     				"a 'slideshow' like grouping of images", 
     		displayName = "Group",

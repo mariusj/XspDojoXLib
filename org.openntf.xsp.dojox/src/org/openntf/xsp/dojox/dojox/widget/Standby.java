@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.widget;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo Standby", 
 		description = "A widget designed to act as a Standby/Busy/Disable/Blocking widget to indicate a particular DOM node is processing and cannot be clicked on at this time.", 
 		tagName = "dxStandby",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoLayoutRenderer",
 		dojoModule = "dojox.widget.Standby",
 		defaultDojoType = "dojox.widget.Standby",
@@ -39,49 +39,49 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 )
 public abstract class Standby extends UIDojoWidget {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "A URL to an image to center within the blocking overlay. The default is a basic spinner.", 
     		displayName = "Image",
     		category = "dojo-widget"    		
 	)
     protected String image;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Text to set on the ALT tag of the image. The default is 'Please wait...'", 
     		displayName = "imageText",
     		category = "dojo-widget"    		
 	)
     protected String imageText;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Text to display in the center instead of an image.  The default is 'Please wait...'", 
     		displayName = "text",
     		category = "dojo-widget"    		
 	)
     protected String text;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Which to use as the center info, the text or the image. Defaults to image.", 
     		displayName = "centerIndicator",
     		category = "dojo-widget"    		
 	)
     protected String centerIndicator;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "The color to use for the translucent overlay.", 
     		displayName = "color",
     		category = "dojo-widget"    		
 	)
     protected String color;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "How long the fade in and out effects should run in milliseconds.", 
     		displayName = "duration",
     		category = "dojo-widget"    		
 	)
     protected Integer duration;    
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Control that lets you specify if the zIndex for the overlay " +
     					  "should be auto-computed based off parent zIndex, or should be set " +
     					  "to a particular value.  This is useful when you want to overlay " +
@@ -93,7 +93,7 @@ public abstract class Standby extends UIDojoWidget {
     protected String zIndex;
     
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "The target to overlay when active. Can be a widget id or a dom id", 
     		displayName = "target",
     		category = "dojo-widget"    		

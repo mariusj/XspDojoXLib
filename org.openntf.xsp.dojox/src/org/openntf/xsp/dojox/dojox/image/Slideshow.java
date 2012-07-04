@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.image;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo Slideshow", 
 		description = "Widget that displays a series of thumbnail sized images, for quick browsing and selection, and a single large image", 
 		tagName = "dxSlideshow",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoLayoutRenderer",
 		dojoModule = "dojox.image.SlideShow",
 		defaultDojoType = "dojox.image.SlideShow",
@@ -49,7 +49,7 @@ public abstract class Slideshow extends UIDojoWidget {
 	
 	protected Boolean autoLoad;
 	
-    @XspProperty(
+    @XspGenProperty(
     		description = "If true, the SlideShow begins playing immediately", 
     		displayName = "Auto start",
     		category = "dojo-widget"
@@ -64,7 +64,7 @@ public abstract class Slideshow extends UIDojoWidget {
 	
 	protected String titleAttr;
 	
-    @XspProperty(
+    @XspGenProperty(
     		description = "Time, in seconds, between image transitions during a slideshow.", 
     		displayName = "SlideshowInterval",
     		category = "dojo-widget"

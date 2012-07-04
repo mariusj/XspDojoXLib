@@ -16,12 +16,12 @@
 
 package org.openntf.xsp.dojox.dojox.widget;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "Adds automatic rotating to the dojox.widget.Rotator.", 
 		displayName = "Dojo AutoRotator", 
 		smallIcon = "dojox/designer/icons/DojoAutoRotator_16.png",
@@ -31,56 +31,56 @@ import org.openntf.xsp.annotations.XspProperty;
 		tagName = "dxAutoRotator",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "RotatorRenderer",
 		dojoModule = "dojox.widget.AutoRotator",
 		defaultDojoType = "dojox.widget.AutoRotator"
 )
 public abstract class AutoRotator extends RotatorImpl {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Pause the rotator when the mouse hovers over it.", 
     		displayName = "Suspend on Hover",
     		category = "dojo-widget"
 	)
 	protected Boolean suspendOnHover;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "The time in milliseconds before transitioning to the next pane. The default value is 4000 (4 seconds).", 
     		displayName = "Duration",
     		category = "dojo-widget"
 	)
     protected Integer duration;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Starts the timer to transition children upon creation.", 
     		displayName = "Auto Start",
     		category = "dojo-widget"
 	)
     protected Boolean autoStart;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Pause the rotator when the pane is changed or a controller's next or previous buttons are clicked.", 
     		displayName = "Pause on Manual Change",
     		category = "dojo-widget"
 	)
     protected Boolean pauseOnManualChange;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Number of cycles before pausing.", 
     		displayName = "Cycles",
     		category = "dojo-widget"
 	)
     Integer cycles;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Determines if the panes should cycle randomly.", 
     		displayName = "Random",
     		category = "dojo-widget"
 	)
     protected Boolean random;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "Causes the rotator to rotate in reverse order.", 
     		displayName = "Reverse",
     		category = "dojo-widget"

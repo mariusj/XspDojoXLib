@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.widget;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "A Photoshop-like HSV ColorPicker widget.", 
 		displayName = "Dojo Color Picker", 
 		tagName = "dxColorPicker",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 		componentFamily = "javax.faces.Input",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "ColorPickerRendererBase",
 		dojoModule = "dojox.widget.ColorPicker",
 		defaultDojoType = "dojox.widget.ColorPicker",
@@ -40,28 +40,28 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 )
 public abstract class ColorPicker extends UIDojoFormWidgetBase {
 	
-    @XspProperty(
+    @XspGenProperty(
     		description = "show/update RGB input nodes", 
     		displayName = "showRgb", 
     		category = "dojo-widget"
 	)
 	protected Boolean showRgb;
 	
-    @XspProperty(
+    @XspGenProperty(
     		description = "show/update HSV input nodes", 
     		displayName = "showHsv", 
     		category = "dojo-widget"
 	)
 	protected Boolean showHsv;
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "show/update Hex input nodes", 
     		displayName = "showHex", 
     		category = "dojo-widget"
 	)
 	protected Boolean showHex;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Set to true to fire onChange in an indeterminate way", 
     		displayName = "liveUpdate", 
     		category = "dojo-widget"

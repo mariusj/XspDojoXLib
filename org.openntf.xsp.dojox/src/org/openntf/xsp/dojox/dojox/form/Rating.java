@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.form;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "This widget allows users to rate items", 
 		displayName = "Dojo Rating", 
 		tagName = "dxRating",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.form.FormWidgetBase",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.form.DojoFormWidgetRenderer",
 		dojoModule = "dojoxlib.Rating",
 		defaultDojoType = "dojoxlib.Rating",
@@ -39,7 +39,7 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoFormWidgetBase;
 )
 public abstract class Rating extends UIDojoFormWidgetBase {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "The number of stars to show, default is 3", 
     		displayName = "Num Stars",
     		category = "dojo-widget"

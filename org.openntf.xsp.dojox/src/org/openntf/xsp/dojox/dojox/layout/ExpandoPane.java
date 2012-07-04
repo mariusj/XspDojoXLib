@@ -1,12 +1,12 @@
 package org.openntf.xsp.dojox.dojox.layout;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.layout.UIDojoContentPane;
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo ExpandoPane", 
 		description = "A collapsing-pane for dijit.layout.BorderContainer", 
 		tagName = "dxExpandoPane",
@@ -14,7 +14,7 @@ import com.ibm.xsp.extlib.component.dojo.layout.UIDojoContentPane;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.layout.ContentPane",
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoContentPaneRenderer",
 		dojoModule = "dojox.layout.ExpandoPane",
 		defaultDojoType = "dojox.layout.ExpandoPane",
@@ -22,21 +22,21 @@ import com.ibm.xsp.extlib.component.dojo.layout.UIDojoContentPane;
 )
 public abstract class ExpandoPane extends UIDojoContentPane {
 	
-	@XspProperty(
+	@XspGenProperty(
     		description = "Easing function used to hide pane", 
     		displayName = "easeOut",
     		category = "dojo-widget"
 	)
 	protected String easeOut;
 
-	@XspProperty(
+	@XspGenProperty(
     		description = "Easing function used to show pane", 
     		displayName = "easeIn",
     		category = "dojo-widget"
 	)
 	protected String easeIn;
 
-	@XspProperty(
+	@XspGenProperty(
     		description = "duration to run show/hide animations", 
     		displayName = "duration",
     		category = "dojo-widget",
@@ -44,7 +44,7 @@ public abstract class ExpandoPane extends UIDojoContentPane {
 	)
 	protected Integer duration;
 	
-	@XspProperty(
+	@XspGenProperty(
     		description = "Does this widget start in an open (true) or closed (false) state", 
     		displayName = "startExpanded",
     		category = "dojo-widget",
@@ -52,7 +52,7 @@ public abstract class ExpandoPane extends UIDojoContentPane {
 	)
 	protected Boolean startExpanded;
 	
-	@XspProperty(
+	@XspGenProperty(
     		description = "A value from 0 .. 1 indicating the opacity to use on the container when only showing a preview", 
     		displayName = "previewOpacity",
     		category = "dojo-widget",
@@ -60,7 +60,7 @@ public abstract class ExpandoPane extends UIDojoContentPane {
 	)
 	protected Float previewOpacity;
 	
-	@XspProperty(
+	@XspGenProperty(
     		description = "If true, will override the default behavior of a " +
     				"double-click calling a full toggle. If false, a double-click " +
     				"will cause the preview to popup", 
@@ -69,7 +69,7 @@ public abstract class ExpandoPane extends UIDojoContentPane {
 	)
 	protected Boolean previewOnDblClick;
 	
-	@XspProperty(
+	@XspGenProperty(
     		description = "Specifies where to position this control within its parent container", 
     		displayName = "region",
     		editor = "com.ibm.workplace.designer.property.editors.comboParameterEditor",

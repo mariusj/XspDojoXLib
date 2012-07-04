@@ -21,14 +21,14 @@ import java.util.List;
 
 import javax.faces.context.FacesContext;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 import com.ibm.xsp.util.StateHolderUtil;
 
-@XspComponent(
+@XspGenComponent(
 		description = "Displays a series of controls that send actions to a Rotator or AutoRotator", 
 		displayName = "Dojo Rotator Controller",
 		smallIcon = "dojox/designer/icons/DojoRotatorController_16.png",
@@ -38,7 +38,7 @@ import com.ibm.xsp.util.StateHolderUtil;
 		tagName = "dxRotatorController",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "RotatorControllerRendererBase",
 		dojoModule = "dojox.widget.rotator.Controller",
 		defaultDojoType = "dojox.widget.rotator.Controller",
@@ -46,14 +46,14 @@ import com.ibm.xsp.util.StateHolderUtil;
 )
 public abstract class RotatorController extends UIDojoWidget {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "The name of an instance of a Rotator widget defined by jsId.", 
     		displayName = "Rotator",
     		category = "dojo-widget"
 	)
     protected String rotator;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "A list of commands", 
     		displayName = "Commands",
     		category = "dojo-widget",

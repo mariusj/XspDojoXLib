@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.image;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo ThumbnailPicker", 
 		description = "Widget that displays a series of images either horizontally or vertically, with controls to page through the images.", 
 		tagName = "dxThumbnailPicker",
@@ -31,21 +31,21 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.layout.DojoLayoutRenderer",
 		dojoModule = "dojox.image.ThumbnailPicker",
 		defaultDojoType = "dojox.image.ThumbnailPicker",
 		css = { "/.ibmxspres/dojoroot/dojox/image/resources/image.css" }
 )
 public abstract class ThumbnailPicker extends UIDojoWidget {
-    @XspProperty(
+    @XspGenProperty(
     		description = "Setting useLoadNotifier to true makes a colored DIV appear under each thumbnail image, which is used to display the loading status of each image in the data store.", 
     		displayName = "Use Load Notifier",
     		category = "dojo-widget"
 	)
     protected Boolean useLoadNotifier;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Setting useHyperlink to true causes a click on a thumbnail to open a link.", 
     		displayName = "Use Hyperlink",
     		category = "dojo-widget"
@@ -56,7 +56,7 @@ public abstract class ThumbnailPicker extends UIDojoWidget {
     
     protected Boolean isClickable;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "When true, uses smoothScroll to move between pages ", 
     		displayName = "isScrollable",
     		defaultValue = "true",

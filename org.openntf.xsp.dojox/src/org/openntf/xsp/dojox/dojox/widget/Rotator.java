@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.widget;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		displayName = "Dojo Rotator", 
 		description = "A small, fast, extensible, awesome rotator that cycles, with transitions, through panes (child nodes) displaying only one at a time and ties into controllers used to change state.", 
 		tagName = "dxRotator",
@@ -33,14 +33,14 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.Widget", 
 		componentFamily = "javax.faces.Panel" 
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "RotatorRendererBase",
 		dojoModule = "dojox.widget.Rotator",
 		defaultDojoType = "dojox.widget.Rotator"
 )
 public abstract class Rotator extends UIDojoWidget {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "The name of a function that is passed two panes nodes and a duration, then returns a dojo.Animation object. The default value is \"dojox.widget.rotator.swap\"", 
     		displayName = "Transition", 
     		category = "dojo-widget",
@@ -64,7 +64,7 @@ public abstract class Rotator extends UIDojoWidget {
 	)
 	protected String transition;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Parameters for the transition. The string is read in and eval'd as an object. If the duration is absent, the default value will be used.", 
     		displayName = "Transition Params",
     		category = "dojo-widget"

@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dojox.form;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.form.UIDojoButton;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "A Button with progress indicator built in, for indicating processing after you press the button", 
 		displayName = "Dojo BusyButton", 
 		tagName = "dxBusyButton",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoButton;
 		baseComponentType = "com.ibm.xsp.extlib.dojo.form.Button",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.form.DojoButtonRenderer",
 		dojoModule = "dojox.form.BusyButton",
 		defaultDojoType = "dojox.form.BusyButton",
@@ -39,14 +39,14 @@ import com.ibm.xsp.extlib.component.dojo.form.UIDojoButton;
 )
 public abstract class BusyButton extends UIDojoButton {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "text while button is busy", 
     		displayName = "Busy Label",
     		category = "dojo-widget"
 	)
 	protected String busyLabel;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "use a busy icon", 
     		displayName = "Use Busy Icon",
     		category = "dojo-widget"

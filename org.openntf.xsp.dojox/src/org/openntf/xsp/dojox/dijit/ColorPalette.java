@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dijit;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "Displays a color picker", 
 		displayName = "Dojo Color Pallete", 
 		tagName = "dxColorPalette",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		componentFamily = "javax.faces.Panel",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.DojoWidgetRenderer",
 		dojoModule = "dijit.ColorPalette",
 		defaultDojoType = "dijit.ColorPalette",
@@ -39,7 +39,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 )
 public abstract class ColorPalette extends UIDojoWidget {
 	
-    @XspProperty(
+    @XspGenProperty(
     		description = "A string defining the size of the palette", 
     		displayName = "Palette", 
     		category = "dojo-widget",

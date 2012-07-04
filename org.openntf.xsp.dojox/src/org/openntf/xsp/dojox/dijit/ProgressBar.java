@@ -16,14 +16,14 @@
 
 package org.openntf.xsp.dojox.dijit;
 
-import org.openntf.xsp.annotations.XspComponent;
-import org.openntf.xsp.annotations.XspDojoRenderer;
-import org.openntf.xsp.annotations.XspProperty;
+import org.openntf.xsp.annotations.XspGenComponent;
+import org.openntf.xsp.annotations.XspGenDojoRenderer;
+import org.openntf.xsp.annotations.XspGenProperty;
 
 import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 
 
-@XspComponent(
+@XspGenComponent(
 		description = "Gives dynamic feedback on the progress of a long-running operation", 
 		displayName = "Dojo ProgressBar", 
 		tagName = "dxProgressBar",
@@ -31,7 +31,7 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 		componentFamily = "javax.faces.Panel",
 		paletteCategory = "Extlib DojoX"
 )
-@XspDojoRenderer(
+@XspGenDojoRenderer(
 		baseClass = "com.ibm.xsp.extlib.renderkit.dojo.DojoWidgetRenderer",
 		dojoModule = "dijit.ProgressBar",
 		defaultDojoType = "dijit.ProgressBar",
@@ -39,28 +39,28 @@ import com.ibm.xsp.extlib.component.dojo.UIDojoWidget;
 )
 public abstract class ProgressBar extends UIDojoWidget {
 
-    @XspProperty(
+    @XspGenProperty(
     		description = "label on progress bar", 
     		displayName = "Label",
     		category = "dojo-widget"
 	)
 	protected String label;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "number or percentage indicating amount of task completed", 
     		displayName = "value",
     		category = "dojo-widget"
 	)
 	protected String value;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "maximum value", 
     		displayName = "maximum",
     		category = "dojo-widget"
 	)
 	protected Float maximum;
     
-    @XspProperty(
+    @XspGenProperty(
     		description = "Number of places to show in values; 0 by default", 
     		displayName = "places",
     		category = "dojo-widget"
