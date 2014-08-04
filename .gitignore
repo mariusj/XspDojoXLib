@@ -1,1 +1,7 @@
 *.class
+org.openntf.xsp.dojox/bin
+org.openntf.xsp.dojox.feature/bin
+org.openntf.xsp.dojox.updatesite/bin
+
+*.jar
+
