@@ -17,3 +17,4 @@ Export-Package: org.openntf.xsp.dojox,
  org.openntf.xsp.dojox.dojox.form,
  org.openntf.xsp.dojox.dojox.image,
  org.openntf.xsp.dojox.dojox.widget
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
