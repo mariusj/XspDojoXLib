@@ -1,4 +1,8 @@
-/logs.zip
-/plugins/*
-/features/*
+content.jar
+artifacts.jar
+logs.zip
 
+/target/
+/bin/
+/features/
+/plugins/

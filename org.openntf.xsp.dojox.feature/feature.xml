@@ -2,8 +2,7 @@
 <feature
       id="org.openntf.xsp.dojox.feature"
       label="DojoX Feature"
-      version="8.5.3.qualifier"
-      provider-name="Epacta SI">
+      version="9.0.1.qualifier">
 
    <description>
       DojoX Library for XPages

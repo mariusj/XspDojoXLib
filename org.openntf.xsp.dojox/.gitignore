@@ -1,3 +1,4 @@
 /META-INF/library.faces-config.xml
 /META-INF/library.xsp-config
-/apt_generated/*
+/bin
+/target/
